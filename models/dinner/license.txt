@@ -1,0 +1,11 @@
+Model Information:
+* title:	Christmas Dinner
+* source:	https://sketchfab.com/3d-models/christmas-dinner-b0b6ec2e9ce54ccd9d878da6f412d0e3
+* author:	Julia Lemke (https://sketchfab.com/julialemke)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Christmas Dinner" (https://sketchfab.com/3d-models/christmas-dinner-b0b6ec2e9ce54ccd9d878da6f412d0e3) by Julia Lemke (https://sketchfab.com/julialemke) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
