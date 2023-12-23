@@ -16,7 +16,7 @@ const loader = new GLTFLoader();
 
 
 loader.load(
-    `https://sensational-gumption-55de01.netlify.app/models/dinner/scene.gltf`,
+    '…/…/models/dinner/scene.gltf',
     function (gltf) {
         object = gltf.scene;
         scene.add(object);
