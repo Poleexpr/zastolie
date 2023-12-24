@@ -21,7 +21,7 @@ const loader = new GLTFLoader();
 
 
 loader.load(
-    '/models/dinner/scene.gltf',
+    'https://poleexpr.github.io/zastolie/models/dinner/scene.gltf',
     function (gltf) {
         object = gltf.scene;
         scene.add(object);
