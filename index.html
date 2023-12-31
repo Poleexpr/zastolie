@@ -5,13 +5,69 @@
     <meta charset="utf-8">
     <title>zastolie</title>
     <link rel="shortcut icon" href="zastolie.ico">
-    <link rel="stylesheet" href="https://poleexpr.github.io/zastolie/style.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    
     <main>
         <div id="container3D"></div>
     </main>
+    <aside>
+        
+        <img src="/gifts/inoagent.jpg" data-top="20" class="gift">
+        <img src="/gifts/ogon.jpg" data-top="30" class="gift">
+        <img src="/gifts/telepuziki.jpg" data-top="20" class="gift">
+        <img src="/gifts/zaebalo.jpg" data-top="20" class="gift">
+        <img src="/gifts/zapreshayu.jpg" data-top="20" class="gift">
+        <img src="/gifts/kinder.png" data-top="20" class="gift">
+        <img src="/gifts/pivo.png" data-top="20"  class="gift">
+        <img src="/gifts/pivo.png" data-top="20" class="gift">
+        <img src="/gifts/lovesyou.gif" data-top="10" class="gift">
+    </aside>
+    <script>
+        const giftsNodeList = document.querySelectorAll('.gift');
+        giftsNodeList.forEach(el => {
+            el.style.top = `${Math.floor(Math.random() * 60)}vh`;
+    });
+
+        const gifts = Array.from(giftsNodeList);
+
+        gifts.map(gift => gift.onmousedown = function(event) {
+
+            let shiftX = event.clientX - gift.getBoundingClientRect().left;
+            let shiftY = event.clientY - gift.getBoundingClientRect().top;
+
+            gift.style.position = 'absolute';
+            gift.style.top = '0';
+            gift.style.right = '0';
+            gift.style.zIndex = 1000;
+            document.body.append(gift);
+
+            moveAt(event.pageX, event.pageY);
+
+            function moveAt(pageX, pageY) {
+                gift.style.left = pageX - shiftX + 'px';
+                gift.style.top = pageY - shiftY + 'px';
+            }
+
+            function onMouseMove(event) {
+                moveAt(event.pageX, event.pageY);
+            }
+
+document.addEventListener('mousemove', onMouseMove);
+
+gift.onmouseup = function() {
+  document.removeEventListener('mousemove', onMouseMove);
+  gift.onmouseup = null;
+};
+
+});
+
+gifts.map(gift => gift.ondragstart = function() {
+return false;
+});
+    </script>
     <script type="module" src="https://poleexpr.github.io/zastolie/main.js"></script>
 </body>
 
