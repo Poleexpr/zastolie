@@ -34,7 +34,7 @@
 
         const gifts = Array.from(giftsNodeList);
 
-        gifts.map(gift => gift.onmousedown = function(event) {
+        gifts.map(gift => gift.onpointerdown = function(event) {
 
             let shiftX = event.clientX - gift.getBoundingClientRect().left;
             let shiftY = event.clientY - gift.getBoundingClientRect().top;
@@ -58,7 +58,7 @@
 
 document.addEventListener('mousemove', onMouseMove);
 
-gift.onmouseup = function() {
+gift.onpointerup = function() {
   document.removeEventListener('mousemove', onMouseMove);
   gift.onmouseup = null;
 };
