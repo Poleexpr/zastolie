@@ -29,20 +29,18 @@ aside {
 	cursor: grab;
 }
 
-@media screen and (max-width: 650px) {
+@media (max-width: 400px) {
 	body {
 		grid-template-columns: 1fr;
-		grid-display-rows: 20vh 80vh;
 	}
 
 	aside {
-		width: 100vw;
-		height: 20vh;
+		display: none;
 	}
 
 	#container3D canvas {
 		width: 100vw !important;
-		height: 80vh !important;
+		height: 100vh !important;
 	}
 
 	.gift {
